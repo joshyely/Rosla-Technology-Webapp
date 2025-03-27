@@ -25,6 +25,10 @@ services:
       context: ./frontend
       dockerfile: Dockerfile.dev
     container_name: frontend-dev
+    volumes:
+      - ./frontend/src:/src
+      - ./frontend/public:/public
+      - ./frontend/index.html:/index.html
     ports:
       - 8080:80
     networks:
