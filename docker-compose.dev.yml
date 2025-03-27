@@ -14,6 +14,7 @@ services:
       - ORIGINS=[]
     volumes:
       - ./database/development.db:/src/development.db
+      - ./backend/app:/src/app
     ports:
       - 8000:8000
     networks:
