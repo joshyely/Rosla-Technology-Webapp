@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+
+:root {
+    --title: 3.5em;
+
+}
+
+.title{
+    font-size: 5em;
+}
+h1{
+    font-size: 2.8em;
+}
+h2{
+    font-size: 1.7em;
+}
+
+.title,
+h1
+{
+    font-family: "Roboto Flex", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 125,
+        "GRAD" 0,
+        "XOPQ" 96,
+        "XTRA" 468,
+        "YOPQ" 79,
+        "YTAS" 750,
+        "YTDE" -203,
+        "YTFI" 738,
+        "YTLC" 514,
+        "YTUC" 712;
+}
