@@ -25,13 +25,23 @@
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
   --vt-c-text-dark-3: rgba(235, 235, 235, 0.8);
   
-  --color-theme-icon: #a9b5c2;
-  --color-theme-icon-hover: #8b939e;
+  --color-theme-icon: #4A4A4A;
+  --color-theme-icon-hover: #3b3b3b;
+  --color-mobile-btn: #737373;
+  --color-mobile-hover-circle: #616161;
+  
+  --color-primary-1: #0c226f;
+  --color-primary-2: #337cf2;
+  --color-primary-3: #7cb9fe;
+  --color-primary-4: #abd8ff;
+  --color-primary-5: #B9D3D4;
+  --color-primary-6: #d4ebfe;
+  
 
-  --color-primary-1: rgb(216, 159, 121);
-  --color-primary-2: rgb(206, 120, 62);
-  --color-primary-3: rgb(187, 103, 47);
-  --color-secondary-1: rgb(50, 50, 50);
+  --color-secondary-1: #9ff9a2;
+  --color-secondary-2: #37cf4a;
+  --color-secondary-3: #5FA032;
+  
 
   --color-error: rgb(200, 0, 0);
   --color-error-2: rgb(250, 150, 150);

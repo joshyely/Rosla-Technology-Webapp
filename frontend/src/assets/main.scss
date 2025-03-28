@@ -67,7 +67,7 @@ section{
         box-shadow: var(--box-shadow);     
     }
     &.full {
-        width: min(70rem, 100%);
+        width: min(95rem, 100%);
         min-height: 80vh;
         padding: 3% 5%; 
     }
@@ -79,4 +79,10 @@ section{
 .flex {
     display: flex;
     gap: 30px;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    padding:3%;
 }

@@ -1,39 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
 
 
 :root {
-    --title: 3.5em;
-
+    font-size: 100%;
 }
 
-.title{
-    font-size: 5em;
+
+.noto-sans-medium {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
+
+
+.noto-sans-bold,
+h1,
+h2,
+h3
+{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+
 h1{
-    font-size: 2.8em;
+    font-size: 2.8rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
 }
 h2{
-    font-size: 1.7em;
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2.3rem;
 }
 
-.title,
-h1
-{
-    font-family: "Roboto Flex", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    
-    font-variation-settings:
-        "slnt" 0,
-        "wdth" 125,
-        "GRAD" 0,
-        "XOPQ" 96,
-        "XTRA" 468,
-        "YOPQ" 79,
-        "YTAS" 750,
-        "YTDE" -203,
-        "YTFI" 738,
-        "YTLC" 514,
-        "YTUC" 712;
+.mobile{
+    h1{
+        font-size: 1.8rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
 }
+
+
+
