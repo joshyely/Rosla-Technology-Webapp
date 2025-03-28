@@ -1,7 +1,6 @@
 import axios, { AxiosError } from 'axios'
 import { HttpStatusCode } from 'axios';
 import { getToken, deleteToken } from './auth';
-import { Exception } from 'sass';
 
 const backendBaseURL = '/api';
 
@@ -48,7 +47,7 @@ export const apiTest = async () => {
   try {
     response = await axios({
       baseURL: backendBaseURL,
-      url: '/foo',
+      url: '/',
       method: 'get'
     });
   } catch (Exception) {
