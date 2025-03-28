@@ -1,6 +1,5 @@
 <script setup>
 import placeholders from '@/utils/placeholders';
-import Image from './Image.vue';
 
 const props = defineProps({
     heading: {
@@ -19,9 +18,12 @@ const props = defineProps({
 
 <template>
     <div class="card">
-        <Image :src="props.imageSrc" :alt="props.imageAlt"></Image>
         <div class="content">
-            <h2 class="heading">{{ props.heading }}</h2>
+            <slot>
+                <img src="../assets/blankImage.png" alt="Blank Image">
+            </slot>
+            
+            <p class="card-heading noto-sans-bold">{{ props.heading }}</p>
             <p>{{ props.text }}</p>
         </div>
     </div>
@@ -32,14 +34,17 @@ const props = defineProps({
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius-2);
     transition: all .25s ease-in;
+    padding: 10px 0;
     img {
         object-fit: cover;
+        width:100%;
     }
     .content{
-        padding: 0 24px 20px;
+        padding: 15px 24px 20px;
     }
-    .heading {
-        margin-bottom: 1vh;
+    .card-heading {
+        margin: 1vh 0;
+        font-size: 1.3rem;
     }
     &:hover {
         box-shadow: var(--box-shadow-hover);

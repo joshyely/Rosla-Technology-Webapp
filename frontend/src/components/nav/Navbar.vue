@@ -1,7 +1,7 @@
 <script setup>
 import Logo from '../Logo.vue';
-import MenuIcon from '../icons/Menu.vue'
-import CloseIcon from '../icons/Close.vue'
+import MenuIcon from '../icons/mobile/Menu.vue'
+import CloseIcon from '../icons/mobile/Close.vue'
 import MainNav from './lists/Main.vue'
 import AccountNav from './lists/Account.vue'
 import { mobile } from '@/utils/responsive.js';
@@ -69,11 +69,16 @@ watch(
 
 
 <style lang="scss">
+.logo-link{ 
+    text-decoration: none;
+}
+
 .navbar-wrapper {
-    background-color: var(--color-secondary-1);
+    background-color: var(--color-background);
+    border-bottom: solid 1px var(--color-border);
     display:flex;
     justify-content: center;
-    box-shadow: .2px 0 4px rgb(0, 0, 0, .5);
+    height: 8vh;
 }
 
 .nav-container,
@@ -82,7 +87,8 @@ nav
     display:flex;
 }
 .nav-container{
-    width: 1300px;
+    width: 95rem;
+    max-width:100%;
     gap: 10%;
     align-items: center;
 }
@@ -111,6 +117,7 @@ nav
         height: 100%;
         padding: 0;
         gap: 30px;
+        font-size:1rem;
     }
     #account-nav {
         justify-content: end;
@@ -122,7 +129,7 @@ nav
         a {
             width: 100%;
             height: 100%;
-            color:white;
+            color:var(--color-text);
             margin: 0 1%;
             padding: 0 10px;
             transition: color .1s ease-in-out;
@@ -139,7 +146,6 @@ nav
 #mobile{
     padding: 0 1%;
     --nav-height: 70px;
-    // position: relative;
     .logo{
         --logo-size: var(--nav-height);
     }
@@ -150,7 +156,7 @@ nav
         padding: 2% 0;
         position: absolute;
         inset: 0;
-        inset-block-start: var(--nav-height);
+        inset-block-start: calc(var(--nav-height) + .1vh);
         background-color: var(--color-background);
         border-left: 1px solid var(--color-border);
         z-index: 2147483647;
@@ -164,7 +170,7 @@ nav
     .nav-list{
         padding:0;
         flex-direction: column;
-        font-size:1.2em;
+        font-size:1.2rem;
     }
     .nav-item{
         width:100%;
