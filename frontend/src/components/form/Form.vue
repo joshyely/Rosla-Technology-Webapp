@@ -5,7 +5,6 @@ import ErrorMessage from './ErrorMessage.vue';
 import Fieldset from './Fieldset.vue';
 
 const props = defineProps({
-    heading: String,
     validate: {
         type: Boolean,
         default: true,
@@ -41,9 +40,7 @@ const doSubmit = () => {
 </script>
 
 <template>
-<div>
-<h1>{{ props.heading }}</h1>
-<br>
+<div style="padding-top: 2%;">
 <div class="form-container">
     <form @submit.prevent="doSubmit" novalidate>
         <div class="form-default">
@@ -52,7 +49,9 @@ const doSubmit = () => {
         <Fieldset>
             <div class="form-lower">
                 <ErrorMessage class="form-error">{{ props.errMsg }}</ErrorMessage>
-                <Submit></Submit>
+                <slot name="submit-btn">
+                    <Submit></Submit>
+                </slot>
                 <div class="lower-slot">
                     <slot name="lower"></slot>
                 </div>
@@ -61,7 +60,6 @@ const doSubmit = () => {
         
     </form>
 </div>
-
 </div>
 </template>
 

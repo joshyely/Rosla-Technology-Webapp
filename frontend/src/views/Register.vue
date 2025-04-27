@@ -68,7 +68,9 @@ const submitInvalid = () => {
 
 <template>
     <section class="form">
-        <Form heading="Register" @submit="submit" @invalid-submit="submitInvalid" id="register"
+        <h1>Register</h1>
+        <br>
+        <Form @submit="submit" @invalid-submit="submitInvalid" id="register"
             :err-msg="registrationErrs.formErrMsg">
             <template #default>
                 <Fieldset heading="Personal Info">

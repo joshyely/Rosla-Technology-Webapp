@@ -33,9 +33,9 @@ const showHelper = ref(false);
 .input-container {
     border: var(--border);
     border-radius: 5px;
-    height: 38px;
+    min-height: 38px;
     display:flex;
-    align-items: center;
+    // align-items: center;
     transition: border 0.2s ease-in-out;
     position:relative;
     &:focus-within{
@@ -46,14 +46,14 @@ const showHelper = ref(false);
         }
     }
 
-    input {
+    input, textarea {
         background: none;
         border: none;
         padding: 0 1.2em;
         margin: 0;
         width: 100%;
         height: 100%;
-        font-size: 1.1em;
+        font-size: 1rem;
         font-family: Arial, Helvetica, sans-serif;
         &:focus{
         border:none;

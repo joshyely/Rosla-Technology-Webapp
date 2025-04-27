@@ -45,6 +45,7 @@
 
   --color-error: rgb(200, 0, 0);
   --color-error-2: rgb(250, 150, 150);
+  --color-warning: rgb(250, 30, 0);
   --color-success: rgb(0, 162, 0);
 }
 

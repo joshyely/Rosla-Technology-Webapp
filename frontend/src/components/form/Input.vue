@@ -243,7 +243,7 @@ validations.push(validate);
       margin: 0;
       width: 100%;
       height: 100%;
-      font-size: 1.1em;
+      font-size: 1rem;
       font-family: Arial, Helvetica, sans-serif;
       &:focus{
         border:none;

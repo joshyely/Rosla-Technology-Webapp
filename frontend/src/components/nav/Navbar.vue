@@ -78,7 +78,6 @@ watch(
     border-bottom: solid 1px var(--color-border);
     display:flex;
     justify-content: center;
-    height: 8vh;
 }
 
 .nav-container,
@@ -93,22 +92,24 @@ nav
     align-items: center;
 }
 .nav-list{
-    align-items: center;
     list-style:none;
     display:flex;
+    align-content: center;
 }
-.nav-item a{
-    font-size: 1.23em;
-    text-decoration: none;
-    font-weight:500;
-    display: block;
+.nav-item{
+    align-content: center;
+    a{
+        font-size: 1.23rem;
+        text-decoration: none;
+        font-weight:500;
+        display: block;
+    }
 }
-
-
 
 #desktop {
     padding:0 3%;
     --nav-height: 80px;
+    height: var(--nav-height);
     nav {
         height: 100%;
         flex-grow: 1;
@@ -146,6 +147,7 @@ nav
 #mobile{
     padding: 0 1%;
     --nav-height: 70px;
+    height: var(--nav-height);
     .logo{
         --logo-size: var(--nav-height);
     }
@@ -156,7 +158,7 @@ nav
         padding: 2% 0;
         position: absolute;
         inset: 0;
-        inset-block-start: calc(var(--nav-height) + .1vh);
+        inset-block-start: calc(var(--nav-height));
         background-color: var(--color-background);
         border-left: 1px solid var(--color-border);
         z-index: 2147483647;
@@ -174,7 +176,6 @@ nav
     }
     .nav-item{
         width:100%;
-        
     }
     #main-nav{
         margin: 20px 0;

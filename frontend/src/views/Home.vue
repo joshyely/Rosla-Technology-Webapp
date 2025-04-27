@@ -4,7 +4,7 @@ import Card from '@/components/Card.vue';
 import Grid from '@/components/Grid.vue';
 import Accordion from '../components/Accordion.vue';
 import Article from '@/components/Article.vue';
-import TextButton from '@/components/buttons/TextButton.vue';
+import TextButton from '@/components/buttons/Button.vue';
 
 const viewImage = '/src/assets/viewImages/home.png';
 
@@ -13,14 +13,14 @@ const viewImage = '/src/assets/viewImages/home.png';
 </script>
 
 <template>
-<div class="page-top">
-    <div class="container">
+<div class="home-page-top" id="home-top">
+    <div class="home-top-container">
         <div class="page-intro">
-            <h1>Helping homeowners save money and reduce their carbon footprint</h1>
+            <h1 class="title">Helping homeowners save money and reduce their carbon footprint</h1>
             <p>We install smart electricity & gas meters and solar panels and allow you to track your usage through the convenience of your phone.</p>
         </div>
     </div>
-    <div class="image-container">
+    <div class="home-top-image-container">
         <img src="../assets/pageImages/home.jpg" />
         <div class="overlay"></div>
     </div>
@@ -48,13 +48,13 @@ const viewImage = '/src/assets/viewImages/home.png';
     }
 }
 
-.page-top {
+.home-page-top {
     height: fit-content;
     width: 100%;
     background-color: var(--color-primary-5);
     display:grid;
     grid-template-columns: 2fr 3fr;
-    .image-container {
+    .home-top-image-container {
         height: 100%;
         overflow: hidden;
         img {
@@ -63,7 +63,7 @@ const viewImage = '/src/assets/viewImages/home.png';
             height:100%;
         }
     }
-    .container {
+    .home-top-container {
         color: var(--color-text);
         height:100%;
         p{

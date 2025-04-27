@@ -1,6 +1,8 @@
 <script setup>
 import { loggedIn, logout } from '@/utils/auth';
-
+import Button from '@/components/buttons/Button.vue';
+import ButtonPrimary from '@/components/buttons/ButtonPrimary.vue';
+import ButtonSecondary from '@/components/buttons/ButtonSecondary.vue';
 </script>
 
 <template>
@@ -14,10 +16,10 @@ import { loggedIn, logout } from '@/utils/auth';
 </ul>
 <ul id="account-nav" class="nav-list" v-else>
     <li class="nav-item">
-        <RouterLink to="/profile">Profile</RouterLink>
+        <RouterLink to="/account">Account</RouterLink>
     </li>
     <li class="nav-item">
-        <a @click="logout">Logout</a>
+        <a @click="logout" class="pointer-hover">Logout</a>
     </li>
 </ul>
 </template>

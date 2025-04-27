@@ -26,9 +26,9 @@ services:
       dockerfile: Dockerfile.dev
     container_name: frontend-dev
     volumes:
-      - ./frontend/src:/src
-      - ./frontend/public:/public
-      - ./frontend/index.html:/index.html
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - ./frontend/index.html:/app/index.html
     ports:
       - 8080:80
     networks:

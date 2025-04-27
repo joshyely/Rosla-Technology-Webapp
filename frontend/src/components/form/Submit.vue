@@ -7,7 +7,8 @@
 <style scoped>
 input[type=submit]{
     height: 45px;
-    width: 100px;
+    min-width: 100px;
+    padding: 0 1em;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-primary-2);
     background-color: var(--color-primary-2);

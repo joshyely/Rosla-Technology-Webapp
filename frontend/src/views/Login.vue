@@ -46,7 +46,9 @@ const submit = () => {
 
 <template>
     <section class="form">
-        <Form heading="Login" :err-msg="loginErrs.formErrMsg" @submit="submit">
+        <h1>Login</h1>
+        <br>
+        <Form :err-msg="loginErrs.formErrMsg" @submit="submit">
             <template #default>
                 <Fieldset @input="loginErrs.credentialsInvalid = false">
                     <Email v-model="models.email" :err="loginErrs.credentialsInvalid"></Email>

@@ -1,30 +1,21 @@
 <script setup>
 const props = defineProps({
-    color: {
+    fontSize: {
         type: String,
-        default: 'var(--color-primary-2)',
-    },
-    colorText: {
-        type: String, 
-        default: 'rgb(255, 255, 255)',
-    },
-    size: {
-        type: String,
-        default: '1.5em',
-    },
-});
-
-const style = `
-    background-color: ${props.color}; 
-    color: ${props.colorText}; 
-    font-size: ${props.size}
-`;
+        default: '1.2rem'
+    }
+})
 </script>
 
 
 <template>
-<button :style="style">
-    <slot></slot>
+<button 
+    v-bind="$attrs"
+    :style="{
+        fontSize
+    }"
+>
+    <slot>Button</slot>
 </button>
 </template>
 
@@ -45,6 +36,9 @@ button {
     &:disabled{
         opacity: 0.8;
         cursor: not-allowed;
+    }
+    a.router-link-active{
+        filter: brightness(50%);
     }
 }
 </style>
