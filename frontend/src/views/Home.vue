@@ -28,7 +28,7 @@ const viewImage = '/src/assets/viewImages/home.png';
 <section class="full" style="background-color: var(--color-backgroud-soft);">
     <h2>Only 37% of homes in the UK consistently track their energy usage. Why should you?</h2>
     <br>
-    <div class="card-container">
+    <div class="flex" id="home-cards">
         <Card style="background-color: var(--color-primary-6);"></Card>
         <Card style="background-color: var(--color-primary-4);"></Card>
         <Card style="background-color: var(--color-primary-6);"></Card>
@@ -81,7 +81,9 @@ const viewImage = '/src/assets/viewImages/home.png';
     justify-content: center;
 }
 
-
+#home-cards{
+    gap: 5vh;
+}
 
 .main-wrapper {
     padding: 0;

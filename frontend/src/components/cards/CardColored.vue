@@ -20,7 +20,7 @@ const props = defineProps({
     <div class="card">
         <div class="content">
             <slot>
-                <img src="../assets/blankImage.png" alt="Blank Image">
+                <img src="@/assets/blankImage.png" alt="Blank Image">
             </slot>
             
             <p class="card-heading noto-sans-bold">{{ props.heading }}</p>
