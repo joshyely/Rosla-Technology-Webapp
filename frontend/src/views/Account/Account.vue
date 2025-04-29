@@ -14,7 +14,16 @@ const models = reactive({
     dob: ''
 })
 
-const sidebarRoutes = [
+
+
+const accountRoutes = [
+  {
+    to: '/account/appointments',
+    display: 'Appointments'
+  }
+]
+
+const settingsRoutes = [
   {
     to: '/account/profile',
     display: 'Profile'
@@ -28,19 +37,31 @@ const sidebarRoutes = [
 </script>
 
 <template>
-<section class="full">
+<section class="mid">
 <div class="flex">
+  <aside>
     <Sidebar
-      :routes="sidebarRoutes"
+      :routes="accountRoutes"
+    >
+      <template #top>
+            <span id="sidebar-heading">Account</span>
+            <br>
+      </template>
+    </Sidebar>
+    <Sidebar
+      :routes="settingsRoutes"
     >
         <template #top>
-            <span id="sidebar-heading">Account Settings</span>
+            <span id="sidebar-heading">Settings</span>
             <br>
         </template>
     </Sidebar>
-    <div class="content">
-        <RouterView></RouterView>
-    </div>
+
+  </aside>
+    
+  <div class="content">
+      <RouterView></RouterView>
+  </div>
 </div>  
 </section>
   
@@ -49,6 +70,10 @@ const sidebarRoutes = [
 </template>
 
 <style scoped lang="scss">
+aside{
+  flex: 1;
+}
+
 #sidebar-heading{
     font-size: 1.5rem;
     font-weight: 500;
@@ -56,7 +81,10 @@ const sidebarRoutes = [
 }
 .content {
   flex: 3;
-  padding: 40px;
+  padding: 30px 0;
+  @media(min-width:1024px){
+    padding: 40px;
+  }
 
   h1 {
     margin-bottom: 30px;

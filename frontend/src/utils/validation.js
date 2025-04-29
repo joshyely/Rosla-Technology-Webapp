@@ -8,7 +8,7 @@ export const notEmpty = (value) => {
 };
 
 export const sameAs = (value, compare) => {
-    if(compare == null){
+    if(!value || !compare){
         return null
     }
 
@@ -28,7 +28,9 @@ export const sameAs = (value, compare) => {
 };
 
 export const differentTo = (value, compare) => {
-    if(compare == null){
+    if(
+        compare == null
+    ){
         return null
     }
 
@@ -48,3 +50,16 @@ export const differentTo = (value, compare) => {
 };
 
 
+
+export const validateMatch = (value, compare, errMsgRef, displayMsg='Fields do not match.') => {
+    let result = sameAs(value, compare);
+    if(result == null){
+        return true
+    }
+    else if (result == false){
+        errMsgRef.msg = displayMsg;
+        return false
+    }
+    errMsgRef.msg = '';
+    return true;
+}

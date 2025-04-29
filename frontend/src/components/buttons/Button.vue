@@ -1,19 +1,11 @@
 <script setup>
-const props = defineProps({
-    fontSize: {
-        type: String,
-        default: '1.2rem'
-    }
-})
 </script>
 
 
 <template>
 <button 
     v-bind="$attrs"
-    :style="{
-        fontSize
-    }"
+    style="font-size: 1.2rem;"
 >
     <slot>Button</slot>
 </button>

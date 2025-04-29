@@ -25,7 +25,7 @@ const props = defineProps({
 <template>
 <div class="product-card">
     <a :href="'products/' + product.id">
-        <img :src="Products.imageUrl" alt="image">
+        <img :src="product.imageUrl" alt="image">
         <div class="product-about">
             <h2 class="product-name">{{ product.name }}</h2>
             <span class="product-description">{{ product.description }}</span>

@@ -208,7 +208,7 @@ validations.push(validate);
 <style scoped lang="scss">
 
 .field{
-  margin: 1.2vh 0;
+  margin: var(--input-margin);
   position:relative;
   .helper{
     position: absolute;
@@ -262,6 +262,10 @@ validations.push(validate);
       left:auto;
       display:flex;
       gap: 10px;
+      .input-components{
+        display:flex;
+        align-items:center;
+      }
     }
   }
 }

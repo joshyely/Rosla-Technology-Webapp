@@ -16,30 +16,37 @@ const models = reactive({
 <template>
 <h1>Profile</h1>
 <div class="container">
-    <Form>
-        <template #default>
-            <Fieldset heading="Full Name" heading-size="1.5rem">
+    <div class="account-section">
+        <Form
+            submit-value="Update"
+        >
+            <Fieldset heading="Full Name">
                 <div class="flex">
                     <Alpha
-                    placeholder="First Name"
-                    v-model="models.firstName"
+                        v-model="models.firstName"
+                        placeholder="First Name"
                     ></Alpha>
                     <Alpha
-                        placeholder="First Name"
                         v-model="models.lastName"
+                        placeholder="Last Name"
                     ></Alpha>
                 </div>
             </Fieldset>
-            <br>
-            <Fieldset heading="Date of Birth" heading-size="1.5rem">
-                <Date v-model="models.dob"></Date>
+            <Fieldset heading="Date of Birth">
+                <Date></Date>
             </Fieldset>
-        </template>
-        <template #submit-btn>
-            <div class="flex submit-container">
-                <Submit value="Update Profile"></Submit>
-            </div>
-        </template>
-    </Form>
+        </Form>
+    </div>
 </div>
 </template>
+
+<style lang="scss">
+.account-section{
+    width: 80%;
+    fieldset{
+        .fieldset-heading{
+            font-size: 1.2rem;
+        }
+    }
+}
+</style>

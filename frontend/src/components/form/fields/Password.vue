@@ -28,5 +28,8 @@ const passwordToggle = () => passwordShow.value = !passwordShow.value;
 </template>
 
 <style lang="scss" scoped>
-
+.password-toggle-btn{
+    display: flex;
+    align-items: center;
+}
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import ProductCard from '@/components/ProductCard.vue';
+import ProductCard from '@/components/cards/ProductCard.vue';
 
 const products = [
     {
@@ -36,6 +36,7 @@ const products = [
 <template>
 <section class="full">
     <h1>Products</h1>
+    <br>
     <div class="products-grid loading">
         <ProductCard v-for="product in products"
             :product="product"

@@ -56,6 +56,7 @@ validations.push(validate);
 <style scoped lang="scss">
 
 .select-wrapper {
+    margin: var(--input-margin);
     border: var(--border);
     border-radius: var(--border-radius-2);
     height: 38px;

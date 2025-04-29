@@ -1,7 +1,6 @@
 <script setup>
-import Card from '@/components/Card.vue';
 import PagePrimary from '@/templates/PagePrimary.vue';
-import { ref, reactive } from 'vue';
+import { reactive } from 'vue';
 import Form from '@/components/form/Form.vue';
 import Fieldset from '@/components/form/Fieldset.vue';
 import Alpha from '@/components/form/fields/Alpha.vue';
@@ -32,7 +31,7 @@ const contact = {
         <h1>Contact Us</h1>
     </template>
     <template #top-image-container>
-        <img src="../assets/pageImages/home.jpg" />
+        <img src="@/assets/images/pages/contact.jpg" />
     </template>
     <template #section>
         <section class="full">

@@ -1,5 +1,5 @@
 <script setup>
-import Card from '@/components/Card.vue';
+import Card from '@/components/cards/CardColored.vue';
 import PagePrimary from '@/templates/PagePrimary.vue';
 </script>
 
@@ -12,7 +12,7 @@ import PagePrimary from '@/templates/PagePrimary.vue';
         <p>We install smart electricity & gas meters and solar panels and allow you to track your usage through the convenience of your phone.</p>
     </template>
     <template #top-image-container>
-        <img src="../assets/pageImages/home.jpg" />
+        <img src="@/assets/images/pages/about.jpg" />
     </template>
     <template #section>
         <section class="mid">
@@ -24,13 +24,10 @@ import PagePrimary from '@/templates/PagePrimary.vue';
                 while maximizing energy efficiency.
             </p>
             </article>
+            <br>
             <article>
                 <h2>Our Digital Solution</h2>
-                <div class="card-container">
-                    <Card style="background-color: var(--color-primary-6);"></Card>
-                    <Card style="background-color: var(--color-primary-4);"></Card>
-                    <Card style="background-color: var(--color-primary-6);"></Card>
-                </div>
+                
             </article>
         </section>
     </template>

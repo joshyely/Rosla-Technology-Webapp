@@ -31,6 +31,7 @@ const showHelper = ref(false);
 
 <style scoped lang="scss">
 .input-container {
+    margin: var(--input-margin);
     border: var(--border);
     border-radius: 5px;
     min-height: 38px;

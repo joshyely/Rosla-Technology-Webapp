@@ -12,12 +12,15 @@
     --border-hover: 1.2px solid var(--color-border-hover);
     --box-shadow: .5px .8px 3px rgb(0, 0, 0, .5);
     --box-shadow-hover: .5px .8px 6px rgb(0, 0, 0, .65);
+    --input-margin: 1.2vh 0;
     @media(min-width: 1024px)
     {
         --wrapper-width: 80%;
     }
 }
-  
+
+
+
 *,
 *::before,
 *::after {
@@ -27,6 +30,7 @@
 }
 #app {
     min-height: 100vh;
+    min-width: 100%;
 }
 
 .invalid {
@@ -36,7 +40,6 @@
 .valid {
     border-color: var(--color-success) !important;
 }
-
 
 strong{
     font-weight: 500;
@@ -60,7 +63,30 @@ main{
     align-items: center;
 }
 
+.info-container{
+    font-size: 1.05rem;
+    p{
+        font-weight: 500;
+        span{
+            font-weight: 300;
+        }
+    }
+}
+
+.section-wrapper{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+
+img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+
 section{
+    display:block;
     min-height: fit-content;
     // margin: 2% 0;
     width: 100%;

@@ -9,5 +9,8 @@
     <li class="nav-item">
         <RouterLink to="/products">Products</RouterLink>
     </li>
+    <li class="nav-item">
+        <RouterLink to="/appointments">Appointments</RouterLink>
+    </li>
 </ul>
 </template>

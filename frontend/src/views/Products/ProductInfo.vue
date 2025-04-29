@@ -1,14 +1,14 @@
 <script setup>
 import { formatPrice } from '@/utils/currency';
 import ButtonPrimary from '@/components/buttons/ButtonPrimary.vue';
-import ProductCard from '@/components/ProductCard.vue';
+import ProductCard from '@/components/cards/ProductCard.vue';
 import placeholders from '@/utils/placeholders';
 const product = {
     id: 1,
     name: 'Product',
     description: placeholders.paragraph,
     model: 'ABC1234DE56',
-    imageUrl: 'src/assets/blankImage.png',
+    imageUrl: '/src/assets/blankImage.png',
     stock: 0,
     price: 1,
     discount: {
@@ -22,7 +22,7 @@ const similarProducts = [
         name: 'Product',
         description: 'No Description',
         model: 'ABC1234DE56',
-        imageUrl: 'src/assets/blankImage.png',
+        imageUrl: '/src/assets/blankImage.png',
         stock: 0,
         price: 1,
         discount: {
@@ -35,7 +35,7 @@ const similarProducts = [
         name: 'Product',
         description: 'No Description',
         model: 'ABC1234DE56',
-        imageUrl: 'src/assets/blankImage.png',
+        imageUrl: '/src/assets/blankImage.png',
         stock: 0,
         price: 1,
         discount: {
@@ -48,7 +48,7 @@ const similarProducts = [
         name: 'Product',
         description: 'No Description',
         model: 'ABC1234DE56',
-        imageUrl: 'src/assets/blankImage.png',
+        imageUrl: '/src/assets/blankImage.png',
         stock: 0,
         price: 1,
         discount: {
@@ -62,9 +62,9 @@ const similarProducts = [
 
 <template>
 <section class="full" id="product-basic">
-    <div class="flex">
+    <div class="flex" style="gap:8%;">
         <div class="container flex-primary">
-            <img :src="product.imageUrl" alt="img">
+            <img :src="product.imageUrl" alt="img" width="100%">
         </div>
         <div class="container" id="product-info">
             <div id="top-info">
@@ -150,15 +150,14 @@ const similarProducts = [
         min-height: inherit;
         display:flex;
         flex-direction: column;
-        
         #similar-products{
             display: flex;
-            padding: 5% 5%;
+            padding: 5% 3%;
             flex: 1;
-            overflow: scroll;
-            @media(min-width: 1024px){
-                flex-direction: column;
-            }
+            gap: 3%;
+            width: fit-content;
+            overflow-x: scroll;
+            
             .product-card{
                 flex-grow: 1;
             }

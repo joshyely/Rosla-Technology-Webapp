@@ -1,6 +1,4 @@
 <script setup>
-import Card from '@/components/Card.vue';
-
 </script>
 
 <template>
@@ -21,8 +19,14 @@ import Card from '@/components/Card.vue';
 
 <style lang="scss">
 .top-container{
+    padding: 0 5%;
+    text-align: center;
     h1{
         margin-bottom: 2.5rem;
+    }
+    @media(min-width: 1024px){
+        text-align: start;
+        padding: 0;
     }
 }
 </style>

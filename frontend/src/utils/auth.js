@@ -12,8 +12,9 @@ export const deleteToken = () => {
 
 export const getToken = () => {
     let cookies = document.cookie;
-    let start = cookies.search(tokenVarName) + tokenVarName.length + 1;
-    if (start != -1) {
+    let indexOfName = cookies.search(tokenVarName);
+    if (indexOfName != -1) {
+        let start = indexOfName + tokenVarName.length + 1;
         let end = cookies.indexOf(';', start);
         return cookies.slice(start, end);
     }

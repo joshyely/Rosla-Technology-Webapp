@@ -1,6 +1,6 @@
 <script setup>
 import { reactive, ref, provide } from 'vue';
-import Card from '@/components/Card.vue';
+import Card from '@/components/cards/CardColored.vue';
 import Grid from '@/components/Grid.vue';
 import Accordion from '../components/Accordion.vue';
 import Article from '@/components/Article.vue';
@@ -13,15 +13,15 @@ const viewImage = '/src/assets/viewImages/home.png';
 </script>
 
 <template>
-<div class="home-page-top" id="home-top">
-    <div class="home-top-container">
+<div class="home-page-top flex" id="home-top">
+    <div class="home-top-container container">
         <div class="page-intro">
             <h1 class="title">Helping homeowners save money and reduce their carbon footprint</h1>
             <p>We install smart electricity & gas meters and solar panels and allow you to track your usage through the convenience of your phone.</p>
         </div>
     </div>
     <div class="home-top-image-container">
-        <img src="../assets/pageImages/home.jpg" />
+        <img src="../assets/images/pages/home.jpg" />
         <div class="overlay"></div>
     </div>
 </div>
@@ -52,10 +52,11 @@ const viewImage = '/src/assets/viewImages/home.png';
     height: fit-content;
     width: 100%;
     background-color: var(--color-primary-5);
-    display:grid;
-    grid-template-columns: 2fr 3fr;
+
     .home-top-image-container {
-        height: 100%;
+        flex: 3;
+        display:block;
+        min-height: 100%;
         overflow: hidden;
         img {
             object-fit:cover;
@@ -64,6 +65,8 @@ const viewImage = '/src/assets/viewImages/home.png';
         }
     }
     .home-top-container {
+        flex: 2;
+        
         color: var(--color-text);
         height:100%;
         p{

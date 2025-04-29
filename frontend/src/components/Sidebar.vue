@@ -50,8 +50,8 @@ const props = defineProps({
                 margin-right: 10px;
             }
             &:hover,
-            &.active {
-                background-color: #007bff;
+            &.router-link-active {
+                background-color: var(--color-primary-2);
                 color: white;
             }
         }

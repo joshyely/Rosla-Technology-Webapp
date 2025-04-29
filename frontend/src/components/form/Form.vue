@@ -13,6 +13,10 @@ const props = defineProps({
         type: String,
         default: '',
     },
+    submitValue: {
+        type: String,
+        default: 'Submit'
+    },
 });
 
 
@@ -50,7 +54,7 @@ const doSubmit = () => {
             <div class="form-lower">
                 <ErrorMessage class="form-error">{{ props.errMsg }}</ErrorMessage>
                 <slot name="submit-btn">
-                    <Submit></Submit>
+                    <Submit :value="submitValue"></Submit>
                 </slot>
                 <div class="lower-slot">
                     <slot name="lower"></slot>
