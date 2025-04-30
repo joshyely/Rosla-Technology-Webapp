@@ -21,8 +21,8 @@ import placeholders from '@/utils/placeholders';
     <img src="@/assets/images/pages/appointment-about.jpg" />
 </template>
 <template #section>
-    <section class="full" id="about-appointments">
-        <div class="flex">
+    <section class="full bottom-padding" id="about-appointments">
+        <div class="flex article-row">
             <div class="text-container">
                 <article>
                     <h3>
@@ -127,32 +127,8 @@ import placeholders from '@/utils/placeholders';
 </template>
 
 <style scoped lang="scss">
-.text-container{
-    h3{
-        line-height: normal;
-        margin-bottom: 2vh;
-    }
-    p{
-        margin-bottom: .8vh;
-    }
-    .cta-container{
-        padding: 10% 0;
-    }
-}
-
-
 #about-appointments{
-    padding-bottom: 13vh;
-    .flex{
-        gap: max(8%, 5vh);
-        .text-container{
-            flex:1;
-            .img-container{
-                margin:auto;
-                width: min(100%, 500px);
-            }
-        }
-    }
+    
 }
 #booking-faq{
     .flex{

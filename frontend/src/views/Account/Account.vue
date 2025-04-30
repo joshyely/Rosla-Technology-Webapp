@@ -18,9 +18,13 @@ const models = reactive({
 
 const accountRoutes = [
   {
+    to: '/account/energy-and-devices',
+    display: 'Energy and Devices'
+  },
+  {
     to: '/account/appointments',
     display: 'Appointments'
-  }
+  },
 ]
 
 const settingsRoutes = [
@@ -42,19 +46,13 @@ const settingsRoutes = [
   <aside>
     <Sidebar
       :routes="accountRoutes"
+      heading="Account"
     >
-      <template #top>
-            <span id="sidebar-heading">Account</span>
-            <br>
-      </template>
     </Sidebar>
     <Sidebar
       :routes="settingsRoutes"
+      heading="Settings"
     >
-        <template #top>
-            <span id="sidebar-heading">Settings</span>
-            <br>
-        </template>
     </Sidebar>
 
   </aside>
@@ -74,11 +72,6 @@ aside{
   flex: 1;
 }
 
-#sidebar-heading{
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
 .content {
   flex: 3;
   padding: 30px 0;

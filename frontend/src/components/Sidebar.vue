@@ -10,15 +10,24 @@ const props = defineProps({
                 }
             ]
         }
-    }
+    },
+    heading: String,
 })
 </script>
 
 <template>
 <div class="sidebar">
-    <slot name="top"></slot>
+    <slot name="top">
+        <span class="sidebar-heading" v-show="!!heading">{{ heading }}</span>
+    </slot>
     <nav>
-        <RouterLink v-for="route in routes" :to="route.to">{{ route.display }}</RouterLink>
+        <RouterLink 
+            v-for="route in routes" 
+            :to="route.to"
+            class="sidebar-btn"
+        >
+            {{ route.display }}
+        </RouterLink>
     </nav>
     <slot name="bottom"></slot>
 </div>
@@ -37,7 +46,7 @@ const props = defineProps({
         display: flex;
         flex-direction: column;
         align-items: center;
-        a{
+        .sidebar-btn{
             text-decoration: none;
             color: #333;
             padding: 10px 20px;
@@ -62,7 +71,12 @@ const props = defineProps({
         border-radius: 50%;
         margin-bottom: 20px;
     }
-
+    .sidebar-heading{
+        display:block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1vh;
+    }
     
 }
 </style>

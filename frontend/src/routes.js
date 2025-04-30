@@ -15,6 +15,11 @@ import Security from './views/Account/Security.vue'
 import Appointments from './views/Account/Appointments.vue'
 import AppointmentAbout from './views/Appointments/AppointmentAbout.vue'
 import AppointmentBook from './views/Appointments/AppointmentBook.vue'
+import BaseEnergyTracking from './views/EnergyTracking/Feature/BaseEnergyTracking.vue'
+import TrackingDashboard from './views/EnergyTracking/Feature/TrackingDashboard.vue'
+import MeterReadings from './views/EnergyTracking/Feature/MeterReadings.vue'
+import EnergyTrackingAbout from './views/EnergyTracking/EnergyTrackingAbout.vue'
+import EnergyUsageAndDevices from './views/Account/EnergyUsageAndDevices.vue'
 
 
 const devMode = true;
@@ -53,6 +58,11 @@ const routes = [
                 component: Appointments,
                 name: 'User Appointments'
             },
+            {
+                path: 'energy-and-devices',
+                component: EnergyUsageAndDevices,
+                name: 'User Energy Usage and Devices'
+            },
         ]
     },
     { 
@@ -73,8 +83,32 @@ const routes = [
     {
         path: '/appointments/book',
         component: AppointmentBook,
-        name: 'Appointments Book'
-    }
+        name: 'Appointments Book',
+        beforeEnter: checks.isLoggedIn,
+    },
+    {
+        path: '/energy-tracking',
+        component: BaseEnergyTracking,
+        name: 'Energy Tracking',
+        beforeEnter: checks.isLoggedIn,
+        children: [
+            {
+                path: 'dashboard',
+                component: TrackingDashboard,
+                name: 'Energy Tracking Dashboard'
+            },
+            {
+                path: 'meter-readings',
+                component: MeterReadings,
+                name: 'Energy Tracking Meter Readings'
+            },
+        ]
+    },
+    {
+        path: '/about/energy-tracking',
+        component: EnergyTrackingAbout,
+        name: 'About Energy Tracking',
+    },
 ]
 
 const router = createRouter({

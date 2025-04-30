@@ -12,5 +12,8 @@
     <li class="nav-item">
         <RouterLink to="/appointments">Appointments</RouterLink>
     </li>
+    <li class="nav-item">
+        <RouterLink to="/about/energy-tracking">Energy Tracking</RouterLink>
+    </li>
 </ul>
 </template>
