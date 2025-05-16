@@ -1,0 +1,19 @@
+# Builds frontend into dist volume to be pushed to github pages. 
+# Will be used for showing people the live demo for receiving feedback.
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend-dev
+    volumes:
+      - ./frontend/dist:/app/dist
+    environment:
+      - NODE_ENV=production
+    networks:
+      prod:
+    
+
+networks:
+  prod:
+    driver: bridge
