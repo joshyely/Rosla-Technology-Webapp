@@ -1,12 +1,14 @@
 from fastapi import FastAPI, status
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from .config import settings
-from .api import api_routes
+from app.core.config import settings
+from app.core.lifespan import lifespan
+from app.api import api_routes
 
 
 app = FastAPI(
-    name=settings.PROJECT_NAME
+    name=settings.PROJECT_NAME,
+    lifespan=lifespan,
 )
 app.include_router(api_routes)
 
