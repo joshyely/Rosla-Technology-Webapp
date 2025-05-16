@@ -1,0 +1,13 @@
+# Builds frontend into 'build' volume to be pushed to github pages. 
+# Will be used for showing people the live demo for receiving feedback.
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend-build
+    environment:
+      - NODE_ENV=production
+    volumes:
+     - ./frontend/build:/app/build
+    command: sh -c "cp -r dist/* /app/build"
