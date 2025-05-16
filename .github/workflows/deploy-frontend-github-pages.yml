@@ -35,7 +35,7 @@ jobs:
         run: docker compose -f docker-compose.build.yml up -d
   deploy:
     environment:
-      name: gh-pages
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
@@ -48,7 +48,6 @@ jobs:
         with:
           # Upload entire repository
           path: './frontend/build'
-          publish_branch: gh-pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
