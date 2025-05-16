@@ -29,8 +29,9 @@ jobs:
     # Specify runner +  build & upload the static files as an artifact
     runs-on: ubuntu-latest
     steps:
-      - name: Build static files
+      - name: Checkout
         uses: actions/checkout@v4
+      - name: Build static files
         id: build
         run: docker compose -f docker-compose.build.yml up -d
 
