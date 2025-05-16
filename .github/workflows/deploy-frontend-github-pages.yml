@@ -30,6 +30,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Build Frontend From Compose File
         run: docker compose -f docker-compose.build.yml up -d
   deploy:
@@ -47,6 +48,7 @@ jobs:
         with:
           # Upload entire repository
           path: './frontend/build'
+          publish_branch: gh-pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
