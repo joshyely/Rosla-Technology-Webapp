@@ -30,6 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build static files
+        uses: actions/checkout@v4
         id: build
         run: docker compose -f docker-compose.build.yml up -d
 
