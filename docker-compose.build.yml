@@ -6,8 +6,6 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: frontend-build
-    environment:
-      - NODE_ENV=production
     volumes:
      - ./frontend/build:/app/build
-    command: sh -c "cp -r dist/* /app/build"
+    command: sh -c "cp -r dist/* /app/build && echo $NODE_ENV"

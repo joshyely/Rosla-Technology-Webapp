@@ -31,5 +31,4 @@ export default defineConfig({
   },
   // Github pages live demo configuration
   publicPath: process.env.NODE_ENV === "production" ? "/Rosla-Technology-Webapp/" : "/",
-  base: '/Rosla-Technology-Webapp/',
 })
