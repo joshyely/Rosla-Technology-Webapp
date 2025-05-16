@@ -112,7 +112,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/Rosla-Technology-Webapp/'),
     routes,
 });
 
